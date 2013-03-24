@@ -14,9 +14,10 @@ module EvilAlgorithm
 
       # eliminate from sieve all multipliers of p
       # where p between 2 and n ** 0.5 
-      (2 .. (n ** 0.5).to_i).each do |p|
+      (2 .. sqrt(n)).each do |p|
         next if p > 2 && p % 2 == 0 # optimization: all multipliers of 2 were marked at first step
         j = p*p                     # optimization: up to this step all 2 .. p*p primes where already marked
+
         while sieve[p] && j <= n do
           sieve[j] = false
           j += p
@@ -35,11 +36,12 @@ module EvilAlgorithm
       return nil unless valid_input?(n)
       return [1] if n == 1
 
-      primes = prime_sieve((n**0.5).to_i + 1)
+      primes = prime_sieve(sqrt(n) + 1)
       prime_factors = []
 
       primes.each do |p|
         break if p*p > n
+
         while n % p == 0 do
           prime_factors << p
           n /= p 
@@ -47,11 +49,15 @@ module EvilAlgorithm
       end
 
       prime_factors << n if n > 1
-      prime_factors.uniq
+      prime_factors.uniq # eliminate perfect square's duplicates
     end
 
     def valid_input?(n)
       n.is_a?(Integer) && n > 1
+    end
+
+    def sqrt(n)
+      (n**0.5).to_i
     end
   end
 end
