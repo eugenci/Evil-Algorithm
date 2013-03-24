@@ -28,5 +28,5 @@ or simple:
 
 Run tests:
 
- bundle install
+ bundle install 
  rake test
