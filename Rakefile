@@ -1,4 +1,4 @@
-require_relative "lib/evil_algorithm.rb"
+require_relative "lib/evil_algorithm"
 require 'rake/testtask'
 
 Rake::TestTask.new(:test) do |t|

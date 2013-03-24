@@ -1,5 +1,5 @@
 
-require_relative "../../lib/evil_algorithm/util.rb"
+require_relative "../../lib/evil_algorithm/util"
 require 'test/unit'
 require 'shoulda'
 
