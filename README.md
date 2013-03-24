@@ -29,4 +29,5 @@ or simple:
 Run tests:
 
  bundle install 
+
  rake test
