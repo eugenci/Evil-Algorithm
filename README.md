@@ -15,3 +15,17 @@ number](http://en.wikipedia.org/wiki/Prime_factorization) There are
 plenty of algorithms, however because in current problem integer is
 pretty small I use the a simple and yet efficent (for number of this
 magnitude) [solution](http://en.wikipedia.org/wiki/Trial_division).
+
+Usage
+-----------------
+Calculate largest prime factor of the number 1876191413:
+
+ rake run
+
+or simple:
+ 
+ rake
+
+Run tests
+
+ rake test
