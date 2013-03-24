@@ -1,4 +1,5 @@
-require File.expand_path("../../../lib/evil_algorithm/util.rb",  __FILE__)
+
+require_relative "../../lib/evil_algorithm/util.rb"
 require 'test/unit'
 require 'shoulda'
 

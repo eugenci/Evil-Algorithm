@@ -1,6 +1,4 @@
-#!/usr/bin/env rake
-
-require File.expand_path("lib/evil_algorithm.rb",  File.dirname(__FILE__))
+require_relative "lib/evil_algorithm.rb"
 require 'rake/testtask'
 
 Rake::TestTask.new(:test) do |t|

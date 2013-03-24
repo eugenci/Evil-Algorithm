@@ -26,6 +26,7 @@ or simple:
  
  rake
 
-Run tests
+Run tests:
 
+ bundle install
  rake test
